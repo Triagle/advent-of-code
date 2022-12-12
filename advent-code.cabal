@@ -28,8 +28,8 @@ executable advent-code
     -- other-modules:
 
     -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
-    build-depends:    base ^>=4.16.3.0, parsec ^>=3.1.15.1, containers
+    other-extensions: RankNTypes
+    build-depends:    base ^>=4.16.3.0, parsec ^>=3.1.15.1, containers, lens-family, transformers, fgl, array
     hs-source-dirs:   app
-    other-modules: Utils, Day1, Day2, Day3, Day4, Day5, Day6, Day7, Day8, Parse
+    other-modules: Utils, Day1, Day2, Day3, Day4, Day5, Day6, Day7, Day8, Parse, Day10, Day11, Day12
     default-language: Haskell2010
