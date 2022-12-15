@@ -1,4 +1,4 @@
-module Utils (window, difference, countAll, showEither, chunksOf) where
+module Utils (window, difference, countAll, showEither, chunksOf, converge) where
 import Data.List
 
 window :: Int -> [a] -> [[a]]
@@ -24,3 +24,11 @@ chunksOf n xs =
      then chunk : chunksOf n rest
      -- if the list is empty, return an empty list
      else []
+
+
+converge :: Eq a => (a -> a) -> a -> [a]
+converge f x
+  | y == x = [x]
+  | otherwise = x : converge f y
+  where y = f x
+    
